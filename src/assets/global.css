@@ -20,11 +20,17 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
   padding: 30px 15px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .navigation h2 {
@@ -36,6 +42,52 @@ a {
   gap: 5px;
   align-items: center;
   font-size: 15px;
+}
+
+.search-container {
+  padding: 0 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0 10px 0 40px;
+  margin-bottom: 50px;
+}
+
+.search-container input::placeholder {
+  color: #b8b8b8;
+}
+
+.fa-search {
+  position: absolute;
+  top: 17%;
+  left: 30px;
+  transform: translateY(-50%);
+  color: #b8b8b8;
+}
+
+select {
+  width: 60%;
+  height: 50px;
+  border: none;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: none;
+  padding-left: 20px;
+  color: #7f7f7f;
+}
+
+.fa-chevron-down {
+  position: relative;
+  right: 30px;
+  color: #333;
+  pointer-events: none;
 }
 
 @media (375px <= width) {
