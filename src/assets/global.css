@@ -210,7 +210,8 @@ select {
 
 @media (992px <= width) {
   .countries-container {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
     padding: 0 20px;
   }
   .country {

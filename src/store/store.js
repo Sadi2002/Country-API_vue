@@ -4,6 +4,8 @@ export const country = defineStore("countries", {
   state: () => ({
     allCountries: [],
     theme: "white",
+    countryName: "",
+    filteredCountries: [],
   }),
   actions: {
     async getCountries() {
@@ -35,6 +37,11 @@ export const country = defineStore("countries", {
       this.theme = this.theme === "white" ? "dark" : "white";
       document.body.style.backgroundColor =
         this.theme === "white" ? "#fff" : "rgb(39, 50, 57)";
+    },
+    filterCountries() {
+      this.filteredCountries = this.allCountries.filter((country) =>
+        country.title.toLowerCase().includes(this.countryName.toLowerCase())
+      );
     },
   },
 });
